@@ -1,0 +1,19 @@
+<?php
+
+
+require_once __DIR__ . '../../vendor/autoload.php';
+
+/**
+ *Required Parameters
+ * path
+ */
+
+try {
+    $paymentCorner = new PaymentCorner('user@domain.com', 'password', 'xxxxx-xxxxx-xxxxx-xxxx-xxxxx', false);
+    $transaction = new Transactions();
+    $transaction->setPath('USD');
+    $paymentCorner->retrieveFxTransactionRecord($transaction);
+} catch (PaymentCornerExceptions $exception) {
+    echo $exception->getMessage();
+
+}

@@ -1,0 +1,25 @@
+<?php
+
+
+require_once __DIR__ . '../../vendor/autoload.php';
+
+/**
+ *Required Parameters
+ * currency_to_buy | currency_to_sell | side_of_fx_tx | amount | fx_tx_gtc
+ *Optional Parameters
+ * fx_tx_date | amount_to_buy    | amount_to_sell | fx_tx_unique_id
+ */
+
+try {
+    $paymentCorner = new PaymentCorner('rahulshibu@accubits.com', 'accubits@123', '08b45825-3ded-481d-ac93-9c22b908e10a', false);
+    $transaction = new Transactions();
+    $transaction->setCurrencyToBuy('USD');
+    $transaction->setCurrencyToSell('GBP');
+    $transaction->setAmount(150);
+    $transaction->setSideOfFxTx('buy');
+    $transaction->setFxTxGtc(true);
+    $paymentCorner->fxTransaction($transaction);
+} catch (PaymentCornerExceptions $exception) {
+    echo $exception->getMessage();
+
+}
