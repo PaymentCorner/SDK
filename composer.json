@@ -1,5 +1,5 @@
 {
-    "name": "accubits/payment-corner-sdk",
+    "name": "paymentcorner/payment-corner-sdk",
     "description": "Payment Corner API's",
     "require": {
         "php": "^7.0",
