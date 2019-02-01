@@ -50,7 +50,7 @@ Our FX platform currently supports the following 28 currencies:
 ## Installation
 Install the package with:
 
-````composer require accubits/payment-corner-sdk-php````
+````composer require paymentcorner/payment-corner-sdk````
 
 The recommended way to install the Payment Corner SDK is with Composer. Composer is a dependency management tool for PHP 
 that allows you to declare the dependencies your project needs and installs them into your project
