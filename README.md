@@ -55,10 +55,10 @@ Install the package with:
 The recommended way to install the Payment Corner SDK is with Composer. Composer is a dependency management tool for PHP 
 that allows you to declare the dependencies your project needs and installs them into your project
 
-````javascript
+````json
 {
    "require": {
-      "accubits/payment-corner-sdk-php": "^1.0"
+      "paymentcorner/payment-corner-sdk": "dev-master"
    }
 }
 ````
